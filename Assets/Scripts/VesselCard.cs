@@ -44,9 +44,17 @@ public class VesselCard : Card
         return attackVal;
     }
 
+    public int GetMaxAttack(){
+        return initialAttackVal;
+    }
+
     //Toughness
     public int GetToughness(){
         return currentToughness;
+    }
+
+    public int GetMaxToughness(){
+        return maxToughness;
     }
 
     public void TakeDamage(int x){

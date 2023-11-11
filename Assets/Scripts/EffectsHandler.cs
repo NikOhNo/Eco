@@ -6,33 +6,36 @@ public class EffectsHandler : MonoBehaviour
 {
 
     enum Effect{Draw, BuffAttack, BuffTough, BuffBoth, HealPlayer, DamagePlayer, DestroyCard}
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
-
-    // Update is called once per frame
-    void Update()
+    
+    
+    void Awake()
     {
         
     }
 
     public void DrawCard(GameObject target, int drawn){ //Passes in player and number of cards drawn 
-        
-    }
-
-    public void BuffAttack(Card target, int change){
 
     }
 
-    public void BuffTough(Card target, int change){
-
+    public void BuffAttack(VesselCard target, int change, bool perma){
+        if(perma){
+            target.SetPermaAttack(target.GetMaxAttack() + change);
+        }else{
+            target.SetCurAttack(target.GetCurAttack() + change);
+        }
     }
 
-    public void BuffBoth(Card target, int change){
-        BuffAttack(target, change);
-        BuffTough(target, change);
+    public void BuffTough(VesselCard target, int change, bool perma){
+        if(perma){
+            target.SetToughness(target.GetMaxToughness() + change);
+        }else{
+            target.TakeDamage(-change);
+        }
+    }
+
+    public void BuffBoth(VesselCard target, int change, bool perma){
+        BuffAttack(target, change, perma);
+        BuffTough(target, change, perma);
     }
 
     public void HealPlayer(GameObject target, int healing){
