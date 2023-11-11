@@ -7,12 +7,7 @@ public class BondCard : Card
 
     void Awake()
     {
-        
+        base.type = Card.CardType.Bond;
     }
 
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
 }

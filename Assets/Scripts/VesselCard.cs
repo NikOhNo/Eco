@@ -17,6 +17,7 @@ public class VesselCard : Card
     {   
         attackVal = initialAttackVal;
         currentToughness = maxToughness;
+        base.type = Card.CardType.Vessel;
     }
 
     // Update is called once per frame

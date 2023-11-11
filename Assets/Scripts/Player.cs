@@ -4,11 +4,20 @@ using UnityEngine;
 
 public class Player : MonoBehaviour
 {
-        
+    
+    [Header("Object Assignment")]
+    [SerializeField] EffectsHandler handler;
+
+    [Header("PlayerVariables")]
     [SerializeField] int health;
     [SerializeField] int maxHealth;
 
-    // List<Card> inHand
+    [Header("Misc.")]
+    [SerializeField] List<Card> inHand;
+    [SerializeField] Deck deck;
+    [SerializeField] List<VesselCard> onPlots;
+    [SerializeField] Card environment;
+    [SerializeField] Card heavenlyBond;
 
 
     void Awake(){
@@ -25,7 +34,7 @@ public class Player : MonoBehaviour
         }
     }
 
-    public void Heal(int){
+    public void Heal(int x){
         health += x;
     }
 
@@ -39,5 +48,29 @@ public class Player : MonoBehaviour
     }
 
     //Card Management:
+    public List<Card> getHand(){
+        return inHand;
+    }
+    
+    public List<VesselCard> getPlots(){
+        return onPlots;
+    }
+
+    public BondCard getBond(){
+        return (BondCard) heavenlyBond;
+    }
+
+    public EnvCard getEnv(){
+        return (EnvCard) environment;
+    }
+
+    public void DrawCard(){
+        inHand.Add(deck.DrawCard());
+    }
+
+    //Using Cards:
+    public void PlayCard(Card card){
+        
+    }
 
 }
