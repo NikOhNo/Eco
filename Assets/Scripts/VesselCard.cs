@@ -25,50 +25,50 @@ public class VesselCard : Card
         
     }
 
-    void endOfTurn(){
+    void EndOfTurn(){
         attackVal = initialAttackVal;
         currentToughness = maxToughness;
     }
 
     //Attack:
-    public void setCurAttack(int x){
+    public void SetCurAttack(int x){
         attackVal = x;
     } 
     
-    public void setPermaAttack(int x){
+    public void SetPermaAttack(int x){
         initialAttackVal = x;
         attackVal = initialAttackVal;
     }
 
-    public int getCurAttack(){
+    public int GetCurAttack(){
         return attackVal;
     }
 
     //Toughness
-    public int getToughness(){
+    public int GetToughness(){
         return currentToughness;
     }
 
-    public void takeDamage(int x){
+    public void TakeDamage(int x){
         currentToughness -= x;
         if(currentToughness <= 0){
             //Die
         }
     }
 
-    public void setToughness(int x){
+    public void SetToughness(int x){
         maxToughness = x;
         currentToughness = maxToughness;
     }
 
     //Summoning
-    public bool isSummonable(int x){
+    public bool IsSummonable(int x){
         if(x >= summoningCost)   return true;
         
         return false;
     }
 
-    public int getSacrificeVal(){
+    public int GetSacrificeVal(){
         return sacrificeValue;
     }
 }

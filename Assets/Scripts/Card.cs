@@ -7,6 +7,8 @@ public class Card : MonoBehaviour
 
     enum CardType{Vessel, Environment, Bond};
 
+    [SerializeField] EffectsHandler effects;
+
     public string name;
     public string flavorText;
     public string effectText;
@@ -18,18 +20,20 @@ public class Card : MonoBehaviour
     }
 
     //Setters:
-    public void setName(string _name)
+    public void SetName(string _name)
     {
         name = _name;
     }
 
-    public void setflavor(string _flavor){
+    public void SetFlavor(string _flavor){
         flavorText  = _flavor;
     }
 
-    public void effectText(string _effect){
+    public void SetEffectText(string _effect){
         effectText = _effect;
     }
+
+
 
 
     // Start is called before the first frame update
