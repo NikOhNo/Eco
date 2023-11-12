@@ -9,8 +9,8 @@ EditorBuildSettings:
     path: Assets/Scenes/Final Build/Menu.unity
     guid: a6f3eb3dff483df48ab48e19b6d2fadd
   - enabled: 1
-    path: Assets/Scenes/Final Build/Gameplay.unity
-    guid: f2492c8efd1b8b845bd84c47370e28ae
+    path: Assets/Scenes/Development/GameBoard.unity
+    guid: 4bb1c9f8951992a44a3b710fdd20953b
   - enabled: 1
     path: Assets/Scenes/Final Build/Credits.unity
     guid: f6c1652adcf71ae4da9bbb4ea5548927

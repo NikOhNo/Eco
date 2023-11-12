@@ -284,17 +284,24 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 785880132541156257, guid: 3dca968f7b523384fba734d871a74e49, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 3dca968f7b523384fba734d871a74e49, type: 3}
---- !u!114 &636109089 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 785880132541156257, guid: 3dca968f7b523384fba734d871a74e49, type: 3}
+--- !u!1 &636109089 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 785880132541156256, guid: 3dca968f7b523384fba734d871a74e49, type: 3}
   m_PrefabInstance: {fileID: 636109088}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
+--- !u!114 &636109090
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 636109089}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5f7faf0cafccc224db6a3f8932997152, type: 3}
+  m_Script: {fileID: 11500000, guid: 055fa310f81deba4888fb6ec6a72ea51, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!1 &1187903902
@@ -754,7 +761,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 636109089}
+      - m_Target: {fileID: 636109090}
         m_TargetAssemblyTypeName: SceneLoader, Assembly-CSharp
         m_MethodName: LoadSceneName
         m_Mode: 5
