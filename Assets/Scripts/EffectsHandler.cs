@@ -5,7 +5,7 @@ using UnityEngine;
 public class EffectsHandler : MonoBehaviour
 {
 
-    enum Effect{Draw, BuffAttack, BuffTough, BuffBoth, HealPlayer, DamagePlayer, DestroyCard}
+    public enum Effect{Draw, BuffAttack, BuffTough, BuffBoth, HealPlayer, DamagePlayer, DestroyCard}
     
     
     void Awake()

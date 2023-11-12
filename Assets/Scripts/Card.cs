@@ -5,9 +5,11 @@ using UnityEngine;
 public class Card : MonoBehaviour
 {
 
-    enum CardType{Vessel, Environment, Bond};
+    public enum CardType{Vessel, Environment, Bond};
 
     [SerializeField] EffectsHandler effects;
+
+    public CardType type;
 
     public string name;
     public string flavorText;
@@ -16,7 +18,7 @@ public class Card : MonoBehaviour
 
     void Awake()
     {
-
+        
     }
 
     //Setters:

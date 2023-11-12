@@ -4,15 +4,14 @@ using UnityEngine;
 
 public class EnvCard : Card
 {
-    //Needs to be able to change the field
-    void Start()
+
+    void Awake()
     {
+        base.type = Card.CardType.Environment;
+    }
+
+    public void FieldEffect(){
         
     }
 
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
 }
