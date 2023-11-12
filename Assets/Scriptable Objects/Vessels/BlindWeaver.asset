@@ -1,0 +1,21 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6b315dc65bf66fa43bec7e458362f34c, type: 3}
+  m_Name: BlindWeaver
+  m_EditorClassIdentifier: 
+  effects: []
+  type: 0
+  cardName: Blind Weaver
+  flavorText: With strings of blood and ichur woven between blind claws, the weaver
+    grows his thread evermore.
+  effectText: 
+  sprite: {fileID: 21300000, guid: 0884f31696ad35c4b9db00030459926b, type: 3}
