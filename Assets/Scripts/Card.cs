@@ -13,6 +13,7 @@ public class Card : MonoBehaviour
     public string name;
     public string flavorText;
     public string effectText;
+    public bool onField; // In play
     //Also need sprite and way to handle effects
 
     void Awake()

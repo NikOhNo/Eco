@@ -45,6 +45,7 @@ public class DragDrop : MonoBehaviour, IPointerDownHandler, IBeginDragHandler, I
         }
         else
         {
+            
             this.enabled = false;
         }
     }

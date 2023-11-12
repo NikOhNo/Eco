@@ -86,5 +86,5 @@ public class Player : MonoBehaviour
                 Debug.LogError($"Unrecognized card type: {card.type}. It could not be played.");
                 break;
         }
-
+    }
 }

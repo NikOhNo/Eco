@@ -23,7 +23,7 @@ public class GameManager : MonoBehaviour
     public void RunGame(){
         while(!gameOver){
             if(playerTurn){
-                curPhase = Draw;
+                // curPhase = Draw;
                 // drawCard(player);
                 
 
