@@ -16,7 +16,7 @@ public class UIManager : MonoBehaviour
     PointerEventData ped;
     Camera mainCamera;
 
-    bool attacking;
+    [SerializeField] bool attacking;
     
 
 
@@ -24,7 +24,7 @@ public class UIManager : MonoBehaviour
         pc = new PlayerControls();
         pc.Enable();
         pc.MainGame.RightClick.performed += _ => RightClick();
-        // pc.MainGame.LeftClick.performed += _ => LeftClick();
+        pc.MainGame.LeftClick.performed += _ => LeftClick();
         mainCamera = Camera.main;
 
         gr = this.GetComponent<GraphicRaycaster>();
@@ -38,31 +38,25 @@ public class UIManager : MonoBehaviour
         //If now endphase, change it to endphase
     }
 
-    public void SelectGameObject(GameObject obj){
-        if (selectOne != null){
-            selectOne = obj;
-        }else if(selectTwo != null){
-            selectOne = obj;
-        }
-    }
-
     void LeftClick(){
         ped.position = Input.mousePosition;
         gr.Raycast(ped, results);
 
         if(results.Count != 0){
             if(results[0].gameObject.GetComponent<Card>() && attacking){
-                selectOne = results[0].gameObject;
                 
                 if(selectOne == null){
-
-                }else if(true){
-                    
+                   selectOne = results[0].gameObject; 
+                   Debug.Log("Attacker Selected");
+                }else if(selectOne != null && selectTwo == null){
+                    selectTwo = results[0].gameObject;
+                    Debug.Log("Target Selected");
+                    //Send to the attacking zone
+                    selectOne = null;
+                    selectTwo = null;
                 }
 
             }
-
-
             results.Clear();
         } else if(selectOne != null){
             results.Clear();
