@@ -12,7 +12,7 @@ public class CardSlot : MonoBehaviour, IDropHandler
     Card heldCard;
 
     [SerializeField]
-    Card.CardType expectedType;
+    CardSO.CardType expectedType;
 
     public void OnDrop(PointerEventData eventData)
     {
@@ -29,7 +29,7 @@ public class CardSlot : MonoBehaviour, IDropHandler
     {
         if (card != null && heldCard == null)
         {
-            if (card.type == expectedType)
+            if (card.CardInfo.Type == expectedType)
             {
                 cardObj.transform.SetParent(this.transform);
                 cardObj.GetComponent<RectTransform>().anchoredPosition = Vector2.zero;

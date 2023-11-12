@@ -12,6 +12,7 @@ public class DragDrop : MonoBehaviour, IPointerDownHandler, IBeginDragHandler, I
     private CanvasGroup canvasGroup;
 
     Vector2 origAnchorPos;
+    Transform origParent;
 
     public bool Slotted { get; set; } = false;
 
@@ -24,6 +25,7 @@ public class DragDrop : MonoBehaviour, IPointerDownHandler, IBeginDragHandler, I
     public void OnBeginDrag(PointerEventData eventData)
     {
         origAnchorPos = rectTransform.anchoredPosition;
+        origParent = transform.parent.transform;
         transform.SetParent(canvas.transform);
         canvasGroup.blocksRaycasts = false;
     }
@@ -42,6 +44,7 @@ public class DragDrop : MonoBehaviour, IPointerDownHandler, IBeginDragHandler, I
         if (!Slotted)
         {
             rectTransform.anchoredPosition = origAnchorPos;
+            transform.SetParent(origParent);
         }
         else
         {

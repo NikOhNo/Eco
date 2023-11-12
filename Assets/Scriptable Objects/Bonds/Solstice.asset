@@ -1,0 +1,21 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6b315dc65bf66fa43bec7e458362f34c, type: 3}
+  m_Name: Solstice
+  m_EditorClassIdentifier: 
+  effects: []
+  type: 2
+  cardName: Solstice
+  flavorText: 'Stain the sky with blackness and blot ink into the sun, watch as the
+    clouds burn, alight with heavenly fire. '
+  effectText: 
+  sprite: {fileID: 21300000, guid: 9459a16737b408841b74a9f4d0c635ed, type: 3}

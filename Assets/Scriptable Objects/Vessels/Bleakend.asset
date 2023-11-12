@@ -1,0 +1,21 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6b315dc65bf66fa43bec7e458362f34c, type: 3}
+  m_Name: Bleakend
+  m_EditorClassIdentifier: 
+  effects: []
+  type: 0
+  cardName: Bleakened
+  flavorText: His howl is like death on the wind, is it a crack of wood or a scream
+    covered in hands.
+  effectText: 
+  sprite: {fileID: 21300000, guid: 6317939425f6b1f47860f8786533a5af, type: 3}
