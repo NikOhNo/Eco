@@ -36,12 +36,14 @@ public class CardDisplay : MonoBehaviour
         cardImage.sprite = card.Sprite;
         effectText.text = "[EFFECT]:\n" + card.EffectText;
         flavorText.text = card.FlavorText;
+        panel.blocksRaycasts = true;
         StartCoroutine(OpenDisplayOverTime(openTime));
     }
 
     public void CloseDisplay()
     {
         StopAllCoroutines();
+        panel.blocksRaycasts = false;
         panel.alpha = 0f;
     }
 

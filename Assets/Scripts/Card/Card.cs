@@ -24,4 +24,9 @@ public class Card : MonoBehaviour
     {
         dragCardImage.sprite = cardInfo.Sprite;
     }
+
+    public void OpenFullScreen()
+    {
+        fullscreenDisplay.OpenDisplay(cardInfo);
+    }
 }

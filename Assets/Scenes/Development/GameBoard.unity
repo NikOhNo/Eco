@@ -439,7 +439,6 @@ GameObject:
   m_Component:
   - component: {fileID: 277940881}
   - component: {fileID: 277940885}
-  - component: {fileID: 277940883}
   - component: {fileID: 277940886}
   m_Layer: 5
   m_Name: Card Display
@@ -469,18 +468,6 @@ RectTransform:
   m_AnchoredPosition: {x: 640, y: -360}
   m_SizeDelta: {x: 142.85715, y: 200}
   m_Pivot: {x: 0.5, y: 0.5}
---- !u!225 &277940883
-CanvasGroup:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 277940880}
-  m_Enabled: 1
-  m_Alpha: 1
-  m_Interactable: 1
-  m_BlocksRaycasts: 1
-  m_IgnoreParentGroups: 0
 --- !u!222 &277940885
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -979,8 +966,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0959ce928c62fa04db8a6de82b982bf6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  cardInfo: {fileID: 0}
-  fullscreenDisplay: {fileID: 0}
+  cardInfo: {fileID: 11400000, guid: 1e971fe82cf012b489be3de23f16ce9c, type: 2}
+  fullscreenDisplay: {fileID: 277940886}
   dragCardImage: {fileID: 0}
   happyImage: {fileID: 0}
 --- !u!1 &563381315
@@ -1861,6 +1848,27 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1071303440}
   m_CullTransparentMesh: 1
+--- !u!1 &1196160520 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 7216909659788071161, guid: 64a72ae1fd997624d807569105c1903d, type: 3}
+  m_PrefabInstance: {fileID: 155506655}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1196160523
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1196160520}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f8d30f0d13f2c7041a2ef3788de342e5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  selectOne: {fileID: 0}
+  selectTwo: {fileID: 0}
+  gr: {fileID: 0}
+  attacking: 0
 --- !u!1 &1256482424
 GameObject:
   m_ObjectHideFlags: 0
@@ -1916,8 +1924,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f4b661bd5751fe34f9ebea2c04d1cbef, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  cardInfo: {fileID: 0}
-  fullscreenDisplay: {fileID: 0}
+  cardInfo: {fileID: 11400000, guid: 2dfe126c01e864d4bb64f5f3d9c56fea, type: 2}
+  fullscreenDisplay: {fileID: 277940886}
   dragCardImage: {fileID: 0}
   happyImage: {fileID: 0}
 --- !u!225 &1256482427
@@ -2937,7 +2945,7 @@ CanvasGroup:
   m_Enabled: 1
   m_Alpha: 0
   m_Interactable: 1
-  m_BlocksRaycasts: 1
+  m_BlocksRaycasts: 0
   m_IgnoreParentGroups: 0
 --- !u!1 &1956499358
 GameObject:
@@ -3082,8 +3090,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1cdf3e8b5c98d7b4c9bb9657a4e20fc5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  cardInfo: {fileID: 0}
-  fullscreenDisplay: {fileID: 0}
+  cardInfo: {fileID: 11400000, guid: 812db881c94dafd4a808fb6a651885ab, type: 2}
+  fullscreenDisplay: {fileID: 277940886}
   dragCardImage: {fileID: 0}
   happyImage: {fileID: 0}
   attackVal: 0

@@ -71,8 +71,10 @@ public class UIManager : MonoBehaviour
 
         if(results.Count != 0){
             Debug.Log(results[0].gameObject);
-            if(results[0].gameObject.GetComponent<Card>()){
+            if(results[0].gameObject.GetComponentInParent<Card>()){
                 //Big Display
+                results[0].gameObject.GetComponentInParent<Card>().OpenFullScreen();
+
             }
             results.Clear();
         }
