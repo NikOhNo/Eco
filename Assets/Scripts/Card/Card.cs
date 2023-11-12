@@ -16,6 +16,8 @@ public class Card : MonoBehaviour
 
     RawImage rawImage;
 
+    public bool onField;
+
     [SerializeField]
     Texture2D happyImage;
     public CardSO CardInfo => cardInfo;

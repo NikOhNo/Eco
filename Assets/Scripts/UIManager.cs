@@ -43,7 +43,7 @@ public class UIManager : MonoBehaviour
         gr.Raycast(ped, results);
 
         if(results.Count != 0){
-            if(results[0].gameObject.GetComponent<Card>() && attacking){
+            if(results[0].gameObject.GetComponent<VesselCard>() && attacking){
                 
                 if(selectOne == null){
                    selectOne = results[0].gameObject; 
@@ -56,8 +56,18 @@ public class UIManager : MonoBehaviour
                     selectTwo = null;
                 }
 
+            }else if(selectOne != null && results[0].gameObject.GetComponent<Player>()){
+                selectTwo = results[0].gameObject;
+                Debug.Log("Target Selected");
+                //Send to the attacking zone
+                selectTwo.GetComponent<Player>().TakeDamage(selectOne.GetComponent<VesselCard>().GetCurAttack());
+
+                selectOne = null;
+                selectTwo = null;
             }
             results.Clear();
+
+
         } else if(selectOne != null){
             results.Clear();
         }

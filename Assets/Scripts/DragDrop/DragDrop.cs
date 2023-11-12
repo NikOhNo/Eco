@@ -48,7 +48,7 @@ public class DragDrop : MonoBehaviour, IPointerDownHandler, IBeginDragHandler, I
         }
         else
         {
-            
+            this.gameObject.GetComponent<Card>().onField = true;
             this.enabled = false;
         }
     }

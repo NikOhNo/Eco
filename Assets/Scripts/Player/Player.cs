@@ -30,7 +30,7 @@ public class Player : MonoBehaviour
         health -= x;
 
         if (health <= 0){
-            //Lose
+            Destroy(this);
         }
     }
 
