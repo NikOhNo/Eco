@@ -70,7 +70,9 @@ public class Player : MonoBehaviour
 
     //Using Cards:
     public void PlayCard(Card card){
-        
+
+        //On-Play effects can happen here
+
     }
 
 }
