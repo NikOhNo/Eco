@@ -3,10 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class EffectsHandler : MonoBehaviour
-{
-
-    public enum Effect{Draw, BuffAttack, BuffTough, BuffBoth, HealPlayer, DamagePlayer, DestroyCard}
-    
+{    
     
     void Awake()
     {

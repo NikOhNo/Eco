@@ -6,9 +6,8 @@ public class Card : MonoBehaviour
 {
 
     public enum CardType{Vessel, Environment, Bond};
-
-    [SerializeField] EffectsHandler effects;
-
+    // [SerializeField] EffectsHandler effects;
+    public List<CardEffect> effects;
     public CardType type;
 
     public string name;
