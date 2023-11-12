@@ -11,6 +11,10 @@ public class DragDrop : MonoBehaviour, IPointerDownHandler, IBeginDragHandler, I
     private RectTransform rectTransform;
     private CanvasGroup canvasGroup;
 
+    Vector2 origAnchorPos;
+
+    public bool Slotted { get; set; } = false;
+
     private void Awake()
     {
         rectTransform = GetComponent<RectTransform>();
@@ -19,6 +23,7 @@ public class DragDrop : MonoBehaviour, IPointerDownHandler, IBeginDragHandler, I
 
     public void OnBeginDrag(PointerEventData eventData)
     {
+        origAnchorPos = rectTransform.anchoredPosition;
         transform.SetParent(canvas.transform);
         canvasGroup.blocksRaycasts = false;
     }
@@ -33,6 +38,15 @@ public class DragDrop : MonoBehaviour, IPointerDownHandler, IBeginDragHandler, I
     {
         canvasGroup.alpha = 1f;
         canvasGroup.blocksRaycasts = true;
+
+        if (!Slotted)
+        {
+            rectTransform.anchoredPosition = origAnchorPos;
+        }
+        else
+        {
+            this.enabled = false;
+        }
     }
 
     public void OnPointerDown(PointerEventData eventData)

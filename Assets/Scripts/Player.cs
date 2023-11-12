@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using Unity.VisualScripting;
 using UnityEngine;
 
 public class Player : MonoBehaviour
@@ -18,7 +19,6 @@ public class Player : MonoBehaviour
     [SerializeField] List<VesselCard> onPlots;
     [SerializeField] Card environment;
     [SerializeField] Card heavenlyBond;
-
 
     void Awake(){
         health = maxHealth;
@@ -69,8 +69,23 @@ public class Player : MonoBehaviour
     }
 
     //Using Cards:
-    public void PlayCard(Card card){
-        
+    public void PlayCard(Card card)
+    {
+        switch (card.type)
+        {
+            case Card.CardType.Vessel:
+                onPlots.Add(card as VesselCard);
+                break;
+            case Card.CardType.Environment:
+                environment = card;
+                break;
+            case Card.CardType.Bond:
+                heavenlyBond = card;
+                break;
+            default:
+                Debug.LogError($"Unrecognized card type: {card.type}. It could not be played.");
+                break;
+        }
     }
 
 }
